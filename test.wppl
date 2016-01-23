@@ -1,0 +1,20 @@
+var even = dp.cache(function(x) {
+  console.log('Called `even` with argument ' + x);
+  if (x == 0) {
+    return true;
+  } else {
+    return odd(x - 1);
+  }
+});
+
+var odd = dp.cache(function(x) {
+  console.log('Called `odd` with argument ' + x);
+  if (x == 0) {
+    return false;
+  } else {
+    return even(x - 1);
+  }
+});
+
+console.log(odd(3));
+console.log(odd(5));
