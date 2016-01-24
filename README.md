@@ -36,7 +36,7 @@ returns
 
 ## Installation
 
-To globally install `webppl-timeit`, run:
+To globally install `webppl-dp`, run:
 
     mkdir -p ~/.webppl
     npm install --prefix ~/.webppl webppl-dp
