@@ -18,3 +18,22 @@ var odd = dp.cache(function(x) {
 
 console.log(odd(3));
 console.log(odd(5));
+
+var id = function (x) { return x };
+
+var checkItemCount = function(n) { 
+  var cachedId = dp.cache(id);
+
+  map(cachedId, _.range(n));
+
+  assert.ok(cachedId.cache.itemCount == n, 
+      "itemCount isn't right: " + cachedId.cache.itemCount + " " + n);
+};
+
+checkItemCount(11);
+checkItemCount(37);
+
+
+
+
+

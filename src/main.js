@@ -29,6 +29,8 @@ function cache(f, maxSize) {
       return f.apply(this, [s, newk, a].concat(args));
     }
   };
+  // make the cache publically available to facillitate checking the complexity of algorithms
+  cf.cache = c; 
   return cf;
 }
 
